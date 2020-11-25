@@ -13,7 +13,6 @@ export class Popup {
   }
   
   close() {
-    console.log(this._popup);
     this._popup.classList.remove('popup_is-opened');
     document.removeEventListener('keyup', this._handleEscClose);
   }
@@ -21,7 +20,6 @@ export class Popup {
   _handleEscClose(event) {
     event.preventDefault();
     if(event.which === ESC_KEYCODE) {
-      console.log('esc');
       this.close();
     }
   };
